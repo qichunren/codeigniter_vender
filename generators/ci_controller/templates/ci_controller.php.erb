@@ -1,0 +1,15 @@
+<?php
+class <%= class_name %> extends Controller {
+
+  function index(){
+    echo 'Hello World!';
+  }
+
+<% for action in actions -%>
+  function <%= action %>(){
+    $this->load->view('<%=  file_name %>/<%= action %>_view');
+  }
+<% end -%>
+
+}
+?>

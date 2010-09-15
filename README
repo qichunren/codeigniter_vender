@@ -1,0 +1,40 @@
+CodeigniterVender
+=================
+
+This is for ruby fans who also love php. I love CodeIgniter, a php framework.
+
+http://codeigniter.com/
+
+The current CodeIgniter version is 1.7.2
+
+Example
+=======
+
+ruby script/generate ci_app
+
+ruby script/generate ci_controller blog hot old
+
+How to start?
+=============
+
+First of all, you should have a ruby on rails environment.
+
+Then create a rails project: rails -d mysql blog
+
+After installed CodeigniterVender plugin, you can execute ruby script/generate ci_app in your RAILS_ROOT path
+this will give you a total Codeigniter context.
+Then use command like this (ruby script/generate ci_controller blog hot old) to generate Codeigniter controller and views.
+
+Enjoy it!
+
+
+
+TODO List
+=================
+
+* make the CodeigniterVender to a gem.
+* more code generator for Codeigniter development.
+* test!!!
+
+
+Copyright (c) 2010 [qichunren], released under the MIT license

@@ -1,0 +1,8 @@
+Description:
+    It is for CodeIgniter!
+
+Example:
+    ./script/generate codeigniter_vender Thing
+
+    This will create:
+        what/will/it/create
