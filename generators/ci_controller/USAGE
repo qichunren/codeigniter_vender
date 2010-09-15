@@ -1,0 +1,2 @@
+./script/generate ci_controller welcome index
+./script/generate ci_controller users new create

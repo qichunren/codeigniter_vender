@@ -9,11 +9,11 @@ class CiLayoutGenerator < Rails::Generator::Base
     end
   end
 
+  protected
+
   def banner
     "Usage: #{$0} ci_layout [options]"
   end
-
-  protected
   
   def add_options!(opt)
     opt.separator ''

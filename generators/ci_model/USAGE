@@ -1,0 +1,2 @@
+./script/generate model account
+/script/generate model post title:string body:text published:boolean
