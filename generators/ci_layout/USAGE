@@ -1,0 +1,2 @@
+./script/generate ci_layout
+./script/generate ci_layout --use-jquery
