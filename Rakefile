@@ -1,23 +1,18 @@
+require "rubygems"
 require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
 
-desc 'Default: run unit tests.'
-task :default => :test
+begin
+  require 'jeweler'
 
-desc 'Test the codeigniter_vender plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
-end
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "codeigniter_vender"
+    gemspec.summary = "CodeigniterVender is a Ruby gem for php coder who love CodeIgniter."
+    gemspec.description = "CodeigniterVender is a Ruby gem for php coder who love CodeIgniter.This is for rubyist who also love php."
+    gemspec.email = "whyruby@gmail.com"
+    gemspec.homepage = ""
+    gemspec.authors = ["qichunren"]
+  end
 
-desc 'Generate documentation for the codeigniter_vender plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'CodeigniterVender'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+rescue LoadError
+  puts "Jeweler not available. Install it with: gem install jeweler"
 end
