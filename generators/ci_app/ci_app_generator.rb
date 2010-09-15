@@ -1,4 +1,5 @@
 class CiAppGenerator < Rails::Generator::Base
+  
   def manifest
     record do |m|
       m.file "CodeIgniter_1.7.2/index.php", "public/index.php"
@@ -7,4 +8,5 @@ class CiAppGenerator < Rails::Generator::Base
       system("cp -r #{system_directory} #{public_system_directory}")
     end
   end
+  
 end
