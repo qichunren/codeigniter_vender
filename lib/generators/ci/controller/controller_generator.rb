@@ -11,7 +11,7 @@ module Ci
       end
       
       def controller
-        template "controller.php", "#{@ci_root}/application/controllers/#{file_name}.php"    
+        template "controller.php", "#{ci_root}/application/controllers/#{file_name}.php"    
       end
       
       

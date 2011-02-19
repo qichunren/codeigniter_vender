@@ -2,8 +2,10 @@ module Ci
   module Generators
 
     class NamedBase < ::Rails::Generators::NamedBase
+                 
+      private
       
-      def initialize
+      def ci_root
         @ci_root = YAML.load_file("config/codeigniter.yml")["path"]
       end
     end
