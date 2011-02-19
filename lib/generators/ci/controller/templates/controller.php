@@ -5,6 +5,7 @@ class <%= class_name %> extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		// Write your own initialize code
 	}
 
 	<% for action in actions -%>

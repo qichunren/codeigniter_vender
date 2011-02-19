@@ -10,10 +10,8 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["qichunren"]
   s.date = %q{2011-02-19}
-  s.default_executable = %q{ci}
   s.description = %q{CodeigniterVender is a Ruby gem for php coder who love CodeIgniter.This is for rubyist who also love php.}
   s.email = %q{whyruby@gmail.com}
-  s.executables = ["ci"]
   s.extra_rdoc_files = [
     "README.md"
   ]
@@ -26,7 +24,6 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "bin/ci",
      "codeigniter_vender.gemspec",
      "init.rb",
      "install.rb",
