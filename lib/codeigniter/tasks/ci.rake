@@ -1,4 +1,4 @@
-namespace :app do
+namespace :ci do
 
   desc "generate codeIgniter app layout."
   task :layout => :environment do

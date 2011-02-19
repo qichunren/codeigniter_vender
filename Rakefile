@@ -11,7 +11,9 @@ begin
     gemspec.email = "whyruby@gmail.com"
     gemspec.homepage = "http://github.com/qichunren/codeigniter_vender"
     gemspec.authors = ["qichunren"]
-  end
+    
+  end 
+  Jeweler::GemcutterTasks.new
 
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"
