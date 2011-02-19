@@ -1,3 +1,5 @@
+require "generators/named_base"
+
 module Ci
   module Generators
 
