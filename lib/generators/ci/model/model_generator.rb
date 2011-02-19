@@ -10,7 +10,7 @@ module Ci
       # default_options :skip_timestamps => false, :skip_migration => false 
       
       def create_ci_model
-        template "model.php", "#{ci_root}/application/controllers/#{file_name}_model.php"
+        template "model.php", "#{ci_root}/application/models/#{file_name}_model.php"
       end
       
       def create_rails_model
