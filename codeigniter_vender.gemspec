@@ -373,6 +373,7 @@ Gem::Specification.new do |s|
      "lib/generators/ci/install/templates/CodeIgniterLibs/CodeIgniter_2.0.0/user_guide/toc.html",
      "lib/generators/ci/install/templates/CodeIgniterLibs/CodeIgniter_2.0.0/user_guide/userguide.css",
      "lib/generators/ci/install/templates/README",
+     "lib/generators/ci/install/templates/config/database.php",
      "spec/spec_helper.rb",
      "uninstall.rb"
   ]

@@ -21,12 +21,23 @@ module Ci
         say_status("Remove some unused files", "", :green)
         remove_file "public/#{@subdir}/user_guide"
         remove_file "public/#{@subdir}/license.txt"
+        remove_file "public/#{@subdir}/application/config/database.php" if use_mysql?
       end
       
       def generate_configfile               
-        say_status("Config", "", :green)
+        say_status("Generate a config file for bak", "", :green)
         create_file "config/codeigniter.yml" do
           "version: #{options.version}\npath: public/#{@subdir}"
+        end
+      end
+      
+      def set_db_config 
+        say_status("Set config from current rails environment", "", :green)
+        @environments = YAML.load_file("config/database.yml")
+        if use_mysql?
+          template "config/database.php", "public/#{@subdir}/application/config/database.php"
+        else
+          say("passed this step because you are not using mysql database.")
         end
       end
       
@@ -34,7 +45,12 @@ module Ci
       #   say_status("git commit", "log git commit CodeIgniter (#{options.version})", :green)
       #   git :add => "public/#{options.subdir}" rescue puts "no git pros"
       #   git :commit => "installed CodeIgniter (#{options.version}) into public/#{options.subdir}" rescue puts "no git pros"
-      # end  
+      # end
+      
+      private
+      def use_mysql?
+        YAML.load_file("config/database.yml")["development"]["adapter"] =~ /mysql/  
+      end  
        
     end 
   end
