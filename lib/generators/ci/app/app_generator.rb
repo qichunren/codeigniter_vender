@@ -1,4 +1,4 @@
-module CodeigniterVender
+module Ci
   module Generators
     class AppGenerator < ::Rails::Generators::Base 
       desc "This generator generate CodeIgniter project into public/ directory. This is your first step."

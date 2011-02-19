@@ -373,7 +373,6 @@ Gem::Specification.new do |s|
      "lib/generators/ci/ci_model/templates/ci_model.php.erb",
      "lib/generators/ci/ci_model/templates/model.rb",
      "lib/generators/ci/ci_model/templates/model_migration.rb.erb",
-     "lib/generators/ci_base.rb",
      "spec/spec_helper.rb",
      "uninstall.rb"
   ]
