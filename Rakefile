@@ -31,6 +31,7 @@ end
 namespace :dev do
   task :reinstall do
     sh "gem uninstall codeigniter_vender" rescue ""
+    sh "git add ."
     Rake::Task['install'].invoke 
   end
 end

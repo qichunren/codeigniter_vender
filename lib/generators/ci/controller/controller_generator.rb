@@ -17,7 +17,10 @@ module Ci
       def generate_view
         empty_directory file_name
         actions.each do |action|
-          template "view.php", "#{ci_root}/application/views/#{file_name}/<%= action %>_view.php"
+          template "view.php", "#{ci_root}/application/views/#{file_name}/#{action}_view.php"
+        end                      
+        create_file "#{ci_root}/application/views/#{file_name}/index.html" do
+          "you can't visit it"
         end
       end
       
