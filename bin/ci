@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-# -*- mode: ruby -*-
-        
-require "codeigniter_verder/commands"
-  
