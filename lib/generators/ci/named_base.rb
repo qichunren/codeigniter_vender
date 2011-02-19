@@ -6,7 +6,7 @@ module Ci
       private
       
       def ci_root
-        @ci_root = YAML.load_file("config/codeigniter.yml")["path"]
+        @ci_root ||= YAML.load_file("config/codeigniter.yml")["path"]
       end
     end
     
