@@ -20,11 +20,25 @@ The above commands will generate php code into public directory
 First of all, you should have a ruby on rails environment.
 
 Then create a rails project: 
-      rails -d mysql blog
+      rails new blog -d mysql
+     
+Add CodeigniterVender to your environment:
+    # in Gemfile
+    gem "codeigniter_vendor"
+    
+    # then execute
+    bundle install
 
-After installed CodeigniterVender gem, you can execute ruby script/generate ci_app in your RAILS_ROOT path
-this will give you a total Codeigniter context in RAILS_ROOT/public.
-Then use command like this (ruby script/generate ci_controller blog hot old) to generate Codeigniter controller and views.
+Now your have setup a good workplace.
+
+    rails g ci:install
+    
+This will generate codeIgniter project into your RAILS_ROOT/public with given sub directory name.
+
+   rails g ci:controller Page about_us help
+   
+This will generate a controller named Page and two pages (about_us.php and help) for you.
+      
 
 Enjoy it!
 
