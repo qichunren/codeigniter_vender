@@ -1,7 +1,8 @@
 module Ci
   module Generators
 
-    class ControllerGenerator < NamedBase 
+    class ControllerGenerator < NamedBase
+      argument :actions, :type => :array, :default => [], :banner => "action action" 
       
       def self.source_root
         File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
