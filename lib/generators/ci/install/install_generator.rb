@@ -10,8 +10,7 @@ module Ci
       end        
       
       desc "This generator generate CodeIgniter project into public/ directory. This is your first step."
-      
-  
+        
       def generate_app
         say_status("installing", "CodeIgniter (#{options.version})", :green) 
         @subdir = ask("What's your php CodeIgniter project sub-directory name in RAILS_ROOT/public path?")
@@ -19,8 +18,16 @@ module Ci
       end
       
       def rm_unused_files 
-        say_status("Remove some unused files", "user_guide")
+        say_status("Remove some unused files", "", :green)
         remove_file "public/#{@subdir}/user_guide"
+        remove_file "public/#{@subdir}/license.txt"
+      end
+      
+      def generate_configfile               
+        say_status("Config", "", :green)
+        create_file "config/codeigniter.yml" do
+          "version: #{options.version}\npath: public/#{@subdir}"
+        end
       end
       
       # def git_commit       
