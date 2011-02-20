@@ -4,16 +4,14 @@ This is for ruby fans who also love php. I love [CodeIgniter](http://codeigniter
 
 It is a set of php-code generators.
 
-The current CodeIgniter version is 2.0
+The current official CodeIgniter version is 2.0.
 
-### Example
+#### What is CodeIgniter?
 
-in your rails application:
-    ruby script/generate ci_app
+CodeIgniter is a powerful PHP framework with a very small footprint, built for PHP coders who need a simple and elegant toolkit to create full-featured web applications. If you're a developer who lives in the real world of shared hosting accounts and clients with deadlines, and if you're tired of ponderously large and thoroughly undocumented frameworks.
 
-    ruby script/generate ci_controller blog hot old
- 
-The above commands will generate php code into public directory
+CodeIgniter 是一个小巧但功能强大的 PHP 框架，作为一个简单而“优雅”的工具包，它可以为 PHP 程序员建立功能完善的 Web 应用程序。如果你是一个使用共享主机，并且为客户所要求的期限而烦恼的开发人员，如果你已经厌倦了那些傻大笨粗的框架。 
+
 
 ### How to start?
 
@@ -42,7 +40,12 @@ This will generate a controller named Page and two pages (about_us.php and help)
 
 Enjoy it!
 
+### Resources
 
++ [CodeIgniter official site](http://codeigniter.com/)
++ [CodeIgniter user guide](http://codeigniter.com/user_guide/)
++ [CodeIgniter中国站](http://codeigniter.org.cn/)  
++ [XAMPP](http://www.apachefriends.org/zh_cn/xampp.html)
 
 ### TODO List
 
@@ -50,4 +53,4 @@ Enjoy it!
 + test!!!
 
 
-Copyright (c) 2010 [qichunren], released under the MIT license
+Copyright (c) 2010 - 2011 [qichunren], released under the MIT license
