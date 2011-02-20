@@ -11,7 +11,6 @@ module Ci
       end   
       
       def generate_view
-        empty_directory file_name
         actions.each do |action|
           template "view.php", "#{ci_root}/application/views/#{file_name}/#{action}_view.php"
         end                      
