@@ -1,13 +1,12 @@
+# encoding: utf-8
+require "generators/ci/base"
+
 module Ci
   module Generators
-    class InstallGenerator < ::Rails::Generators::Base   
+    class InstallGenerator < Base   
       
       class_option :version, :type => :string, :aliases => :v, :default => "2.0.0", :desc => "set CodeIgniter version."
-      # class_option :subdir, :type => :string, :aliases => :s, :default => "", :desc => "install CodeIgniter prject into public subdir."  
-      
-      def self.source_root
-        File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
-      end        
+      # class_option :subdir, :type => :string, :aliases => :s, :default => "", :desc => "install CodeIgniter prject into public subdir."       
       
       desc "This generator generate CodeIgniter project into public/ directory. This is your first step."
         

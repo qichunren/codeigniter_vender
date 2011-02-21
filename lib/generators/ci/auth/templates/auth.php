@@ -1,17 +1,18 @@
-<?php 
-class Auth extends Controller{
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ 
+class Auth extends CI_Controller{
 	
-	function __construct(){
-		parent::Controller();
-	}
+  	function __construct(){
+  		parent::__construct();
+  		// Write your own initialize code
+  	} 
 	
 	function index($message=null){
 		$data = array(
 			'message' => $message
 		);
 		
-		$this->load->view('admin/header_simple');
-		$this->load->view('admin/auth/login_form', $data);
+		$this->load->view('auth/login_form', $data);
 	}
 	
 	function login(){
@@ -20,7 +21,7 @@ class Auth extends Controller{
 		if($login_result !== TRUE)
 			$this->index($login_result);
 		else
-			redirect('admin/dashboard');
+			redirect('users/dashboard');
 	}
 	
 	function logout(){

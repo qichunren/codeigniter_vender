@@ -1,10 +1,10 @@
 <?php 
 class Auth_model extends Model{
 	
-	function __contstruct(){
-		parent::Model();
-		//session_start();
-	}
+	  function __contstruct(){
+  		parent::Model();
+  		//session_start();
+  	}    
 	
 	function doLogin(){
 		$data = array(
@@ -35,18 +35,18 @@ class Auth_model extends Model{
   		return TRUE;
 	}
 	
-	function doLogout(){
-		$this->session->sess_destroy();
-	}
+  	function doLogout(){
+  		$this->session->sess_destroy();
+  	}   
 	
-	function loggedIn(){
-		$user = $this->session->userdata('user');
-		if($user == null || $user == '')
-			return FALSE;
+	  function loggedIn(){
+  		$user = $this->session->userdata('user');
+  		if($user == null || $user == '')
+  			return FALSE;
 		
-		define('USER', $user);
-		define('DISPLAYNAME', $this->session->userdata('displayname'));
+  		define('USER', $user);
+  		define('DISPLAYNAME', $this->session->userdata('displayname'));
 		
-		return TRUE;
-	}
+  		return TRUE;
+  	}
 }
