@@ -17,6 +17,8 @@ module Ci
       
       def create_auth_view
         template "login_form.php", "#{ci_root}/application/views/login_form.php" 
-      end
-  
+      end    
+    end
+    
+  end
 end
