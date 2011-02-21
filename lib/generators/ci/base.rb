@@ -1,7 +1,7 @@
 module Ci
   module Generators
 
-    class Base < ::Rails::Generators::NamedBase 
+    class Base < ::Rails::Generators::Base 
       
       def self.source_root
         @_ci_source_root ||= File.expand_path(File.join(File.dirname(__FILE__), generator_name, 'templates'))
