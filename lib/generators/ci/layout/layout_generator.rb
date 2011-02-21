@@ -1,10 +1,10 @@
 # encoding: utf-8
-require "generators/ci/named_base"
+require "generators/ci/base"
 
 module Ci
   module Generators
 
-    class LayoutGenerator < NamedBase
+    class LayoutGenerator < Base
 
       class_option :jquery, :type => :boolean, :default => true, :desc => "User jQuery js."
       argument :layout_name, :type => :string, :default => "application"
