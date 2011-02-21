@@ -12,7 +12,7 @@
     <div id="header"></div>
     <div id="content"></div>
     <div id="footer"></div>
-<% if use_jquery -%>
+<% if options.jquery? -%>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 <% end -%>
   </body>

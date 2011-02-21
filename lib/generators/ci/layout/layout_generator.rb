@@ -6,10 +6,11 @@ module Ci
 
     class LayoutGenerator < NamedBase
 
-      class_option :use_jquery, :type => :boolean, :aliases => :jq, :default => true, :desc => "User jQuery js."
+      class_option :jquery, :type => :boolean, :default => true, :desc => "User jQuery js."
+      argument :layout_name, :type => :string, :default => "application"
       
       def create_layout
-        template "application_layout.php", "#{ci_root}/application/views/layouts/#{file_name}.php"
+        template "application_layout.php", "#{ci_root}/application/views/layouts/#{layout_name.underscore}.php"
       end
   
     end
