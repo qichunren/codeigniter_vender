@@ -7,16 +7,11 @@ class <%= class_name %>_model extends CI_Model {
     function __construct(){
         parent::__construct();
         //  Write your own initialize code
-    }                         
+    }                                   
     
-    function get($limit){
-      $query = $this->db->get("<%= table_name %>", $limit);
-      return $query->result();
-    }                         
-    
-    function get($per_page, $offset){
+    function get($limit, $offset = 0){
       $query = $this->db->get("<%= table_name %>", $limit, $offset);
-      return $query->result();  
+      return $query->result();
     }
     
     
