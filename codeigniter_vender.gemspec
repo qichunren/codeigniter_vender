@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["qichunren"]
-  s.date = %q{2011-02-21}
+  s.date = %q{2011-02-24}
   s.description = %q{CodeigniterVender is a Ruby gem for php coder who love CodeIgniter.This is for rubyist who also love php.}
   s.email = %q{whyruby@gmail.com}
   s.extra_rdoc_files = [

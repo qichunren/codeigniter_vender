@@ -28,6 +28,15 @@ module Ci
         create_file "config/codeigniter.yml" do
           "version: #{options.version}\npath: public/#{@subdir}"
         end
+      end        
+      
+      def create_resources_dir_and_files    
+        say_status("Generate assets directory for resources", "", :green)
+        empty_directory "public/#{@subdir}/assets"
+        empty_directory "public/#{@subdir}/assets/images"
+        empty_directory "public/#{@subdir}/assets/javascripts"
+        empty_directory "public/#{@subdir}/assets/stylesheets"
+        empty_directory "public/#{@subdir}/assets/uploads"
       end
       
       def set_db_config 
