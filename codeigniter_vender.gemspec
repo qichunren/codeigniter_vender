@@ -369,6 +369,7 @@ Gem::Specification.new do |s|
      "lib/generators/ci/layout/templates/application_layout.php",
      "lib/generators/ci/model/USAGE",
      "lib/generators/ci/model/model_generator.rb",
+     "lib/generators/ci/model/templates/migration.rb",
      "lib/generators/ci/model/templates/model.php",
      "lib/generators/ci/model/templates/model.rb",
      "lib/generators/ci/model/templates/model_migration.rb.erb",

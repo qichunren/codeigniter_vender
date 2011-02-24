@@ -1,13 +1,26 @@
+require 'rails/generators/migration'
+require 'rails/generators/active_model'
+require 'rails/generators/active_record/migration'
+
 require "generators/ci/named_base"
 
 module Ci
   module Generators
 
     class ModelGenerator < NamedBase
+      
       argument :attributes, :type => :array, :default => [], :banner => "field:type field:type"
       class_option :migration,  :type => :boolean
       
+      
+      
       # default_options :skip_timestamps => false, :skip_migration => false 
+      
+      # Implement the required interface for Rails::Generators::Migration.
+      def self.next_migration_number(dirname) #:nodoc:
+        next_migration_number = current_migration_number(dirname) + 1
+        ActiveRecord::Migration.next_migration_number(next_migration_number)
+      end
       
       def create_ci_model
         template "model.php", "#{ci_root}/application/models/#{file_name}_model.php"
@@ -17,9 +30,6 @@ module Ci
         
       end
       
-      def create_migration
-        
-      end 
       
     end
     
