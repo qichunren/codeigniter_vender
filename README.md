@@ -33,9 +33,13 @@ Now your have setup a good workplace.
     
 This will generate codeIgniter project into your RAILS_ROOT/public with given sub directory name.
 
-   rails g ci:controller Page about_us help
+    rails g ci:controller Page about_us help
    
-This will generate a controller named Page and two pages (about_us.php and help) for you.
+This will generate a controller named Page and two pages (about_us.php and help) for you.  
+
+    rails g ci:model User name:string email:string
+    
+This will generate a codeigniter model named User_model and 'create_users' migration for you.
       
 
 Enjoy it!
