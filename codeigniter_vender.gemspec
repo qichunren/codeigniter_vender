@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["qichunren"]
-  s.date = %q{2011-02-24}
+  s.date = %q{2011-02-25}
   s.description = %q{CodeigniterVender is a Ruby gem for php coder who love CodeIgniter.This is for rubyist who also love php.}
   s.email = %q{whyruby@gmail.com}
   s.extra_rdoc_files = [
@@ -369,10 +369,8 @@ Gem::Specification.new do |s|
      "lib/generators/ci/layout/templates/application_layout.php",
      "lib/generators/ci/model/USAGE",
      "lib/generators/ci/model/model_generator.rb",
-     "lib/generators/ci/model/templates/migration.rb",
+     "lib/generators/ci/model/templates/migration.rb.erb",
      "lib/generators/ci/model/templates/model.php",
-     "lib/generators/ci/model/templates/model.rb",
-     "lib/generators/ci/model/templates/model_migration.rb.erb",
      "lib/generators/ci/named_base.rb",
      "spec/spec_helper.rb",
      "uninstall.rb"

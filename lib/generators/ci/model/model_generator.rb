@@ -1,35 +1,47 @@
-require 'rails/generators/migration'
-require 'rails/generators/active_model'
-require 'rails/generators/active_record/migration'
-
-require "generators/ci/named_base"
+# encoding: utf-8
+require 'rails/generators/active_record'
 
 module Ci
   module Generators
 
-    class ModelGenerator < NamedBase
+    class ModelGenerator < ActiveRecord::Generators::Base
+      desc "Create a codeIgniter model."
+      
       
       argument :attributes, :type => :array, :default => [], :banner => "field:type field:type"
-      class_option :migration,  :type => :boolean
+      class_option :skip_migration,  :type => :boolean, :default => false  
       
-      
-      
-      # default_options :skip_timestamps => false, :skip_migration => false 
-      
-      # Implement the required interface for Rails::Generators::Migration.
-      def self.next_migration_number(dirname) #:nodoc:
-        next_migration_number = current_migration_number(dirname) + 1
-        ActiveRecord::Migration.next_migration_number(next_migration_number)
+      def self.source_root
+        @source_root ||= File.expand_path('../templates', __FILE__)
       end
       
+      
+      def generate_migration
+         migration_template "migration.rb.erb", "db/migrate/#{migration_file_name}" unless options.skip_migration?  
+       end
+    
       def create_ci_model
         template "model.php", "#{ci_root}/application/models/#{file_name}_model.php"
       end
       
       def create_rails_model
-        
-      end
+        template "model.rb.erb", "app/models/#{file_name}.rb"  
+      end   
       
+      protected
+
+      def migration_file_name
+        "create_#{table_name}.rb"
+      end
+
+      def migration_class_name
+        "create_#{table_name}".camelize
+      end      
+      
+      def ci_root
+        @ci_root ||= YAML.load_file("config/codeigniter.yml")["path"]
+      end
+
       
     end
     
